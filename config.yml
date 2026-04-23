@@ -1,0 +1,44 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: qwen2.5-coder:7b
+    provider: ollama
+    model: qwen2.5-coder:7b
+    roles:
+      - chat
+      - edit
+      - apply
+  - name: qwen2.5-coder:7b
+    provider: ollama
+    model: qwen2.5-coder:1.5b-base
+    roles:
+      - autocomplete
+  - name: Nomic Embed
+    provider: ollama
+    model: nomic-embed-text:latest
+    roles:
+      - embed
+  - name: Autodetect
+    provider: ollama
+    model: AUTODETECT
+
+  - name: Gemini Pro (Free)
+    provider: gemini
+    model: gemini-1.5-flash
+    apiKey: AIzaSyBHf3rZzU9Q_UyW5UsVDuVfjt64Rfi1hf4
+    roles:
+      - chat
+      - edit
+      - research
+      - scout
+
+  - name: Gemini Backup
+    provider: gemini
+    model: gemini-2.5-flash
+    apiKey: AIzaSyCfQaDZ6M0MbiZ5X8aq4fSB_76315M1FUM
+    roles:
+      - chat
+      - edit
+      - research
+      - scout
